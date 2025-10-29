@@ -1,0 +1,625 @@
+type: collection.insomnia.rest/5.0
+name: MindMove
+meta:
+  id: wrk_b7c91e2347e9439f937b0ff591f6b291
+  created: 1761672291903
+  modified: 1761672291903
+  description: ""
+collection:
+  - name: MindMove
+    meta:
+      id: fld_3e1f4e5f25b8427faec85de9a7a4b92f
+      created: 1714609683123
+      modified: 1761672357088
+      sortKey: -1680422159664
+      description: ""
+    children:
+      - name: Categorias
+        meta:
+          id: fld_ce798673e2d148699088408b3784830e
+          created: 1714609752895
+          modified: 1714609765903
+          sortKey: -1693023615622
+          description: ""
+        children:
+          - url: http://localhost:8080/categorias
+            name: Listar Categorias
+            meta:
+              id: req_f188130c92d4420b9dac9ed44cd323e9
+              created: 1714609774629
+              modified: 1761743994960
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888672
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_6304bd088f6d47de90b8aad133f45958
+              - name: User-Agent
+                value: insomnia/9.1.0
+                id: pair_157c9649c5a54473872beb940b866d3b
+              - id: pair_a10567c9d76f47a895c719547536ef92
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNzQzNzQzLCJleHAiOjE3NjE3NDczNDN9.EFy7ZFgxLHW8C8vA0guCUByjq5xoKZNMuBbcqivTFZmmUm2SwShbikkbJ32gkCCD
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/1
+            name: Listar Categoria por Id
+            meta:
+              id: req_8ee958e057a44b459cde7db1eea98077
+              created: 1714609824886
+              modified: 1761742787325
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888622
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/descricao/musc
+            name: Listar Categorias por Tipo
+            meta:
+              id: req_1903a889cf0b438ba1f1cf3c5e1583ea
+              created: 1714609854505
+              modified: 1761744048890
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888597
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+                id: pair_01f47141055d4f2697c72e99fb93dfe0
+              - id: pair_50f4680f4a8a43fbbcf7bdbdab111970
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNzQzNzQzLCJleHAiOjE3NjE3NDczNDN9.EFy7ZFgxLHW8C8vA0guCUByjq5xoKZNMuBbcqivTFZmmUm2SwShbikkbJ32gkCCD
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Cadastrar Categoria
+            meta:
+              id: req_606a579de1e749e790de1af9854842a5
+              created: 1714609888572
+              modified: 1761743928176
+              isPrivate: false
+              description: ""
+              sortKey: -1714609888572
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                  "descricao": "Musculacao",
+                	"icone": "---------------",
+                	"perfilRelacionado": "tdha"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_c604cff16ec9423083750e874d0a41a5
+              - name: User-Agent
+                value: insomnia/9.1.0
+                id: pair_2d092fe0ee514d0e9b3fc467420e5bf9
+              - id: pair_60847207a4fe4143936dc9691bd87446
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNzQzNzQzLCJleHAiOjE3NjE3NDczNDN9.EFy7ZFgxLHW8C8vA0guCUByjq5xoKZNMuBbcqivTFZmmUm2SwShbikkbJ32gkCCD
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias
+            name: Atualizar Categoria
+            meta:
+              id: req_8714c3336d9141938c873524aa908444
+              created: 1714609941997
+              modified: 1761744145976
+              isPrivate: false
+              description: ""
+              sortKey: -1714609831600.5
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                	"descricao": "Musculacao teste",
+                	"icone": "---------------",
+                	"perfilRelacionado": "tdha",
+                	"exercicio": null
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_8bc76f09e6da4416b458cd28fa87b433
+              - name: User-Agent
+                value: insomnia/9.1.0
+                id: pair_a2ffe45829c94c5283877f4141959c46
+              - id: pair_4ed76d11d1e04238a06d2c049a2b73c4
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNzQzNzQzLCJleHAiOjE3NjE3NDczNDN9.EFy7ZFgxLHW8C8vA0guCUByjq5xoKZNMuBbcqivTFZmmUm2SwShbikkbJ32gkCCD
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/categorias/2
+            name: Deletar Categoria
+            meta:
+              id: req_64c22983a29a4cc59f8c2378f9a84d49
+              created: 1714610558467
+              modified: 1761744172774
+              isPrivate: false
+              description: ""
+              sortKey: -1714219346694
+            method: DELETE
+            headers:
+              - name: User-Agent
+                value: insomnia/9.1.0
+                id: pair_e91b7034d945412098ce96e819d65197
+              - id: pair_84c3231920b74c12a474bc312abe5dea
+                name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNzQzNzQzLCJleHAiOjE3NjE3NDczNDN9.EFy7ZFgxLHW8C8vA0guCUByjq5xoKZNMuBbcqivTFZmmUm2SwShbikkbJ32gkCCD
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Exercícios
+        meta:
+          id: fld_1c853510b32345bdac01d4af9974ceca
+          created: 1761672505912
+          modified: 1761678424534
+          sortKey: -1686722887618
+          description: ""
+        children:
+          - url: http://localhost:8084/usuarios
+            name: Editar Exercícios
+            meta:
+              id: req_47c987fdcc9d4434933d505a7032fbcb
+              created: 1761672505916
+              modified: 1761678490442
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159591
+            method: PUT
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"id": 2,
+                	"titulo": "Shampoo Elseve",
+                	"descricao": "Shampoo 300ml cabelos cacheados",
+                	"preco": 22.00,
+                	"foto": "https://picsum.photos/200/300",
+                	"categoria": {
+                		"id": 4,
+                		"nome": "Cosmetico"
+                	}
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20uYnIiLCJpYXQiOjE2OTc5ODk4NTgsImV4cCI6MTY5Nzk5MzQ1OH0.zlEkNIgzz6Ia4yMJ75hKAAeRaOw6wnohD7NrUlR9yt8
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/exercicios
+            name: Cadastrar Exercícios
+            meta:
+              id: req_f41c3e2fcbcd4c33acd641911813f2f3
+              created: 1761672505917
+              modified: 1761679982542
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159598
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                        "nome": "Musculação",
+                        "descricao": "descrição alongamento",
+                        "duracao": 20,
+                        "estimuloSensorial": "baixo"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_80d63197965e44f7906a7208e25183ca
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjc4NzA3LCJleHAiOjE3NjE2ODIzMDd9.-bEsvLOb9QjsKMzYDQcYc4Nz6n2NjsjEE8YYoIREZVaKE89gcs0-LoUqivrTlfiN
+                id: pair_a3fd8d5bc76d4141b2636a099de02c1f
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/exercicios/2
+            name: Listar Exercícios por Id
+            meta:
+              id: req_ac73b9de2bc64d769165ccb0668de035
+              created: 1761672505919
+              modified: 1761680091308
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159615.5
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjgwMDE3LCJleHAiOjE3NjE2ODM2MTd9.05WlGPE5Ofjg7Aj6me0MMsde1_ob9jK_cw5VpnKOZC9fUtIEcDQefyXSAckb0vP-
+                id: pair_77c4b242e869464c8ccee0ff5585fa37
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/exercicios/nome/Alongamento
+            name: Listar Exercícios por nome
+            meta:
+              id: req_8aba21c8c1864c5989a45ea13a496c6c
+              created: 1761672505920
+              modified: 1761680444141
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159608
+            method: GET
+            headers:
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjgwMDE3LCJleHAiOjE3NjE2ODM2MTd9.05WlGPE5Ofjg7Aj6me0MMsde1_ob9jK_cw5VpnKOZC9fUtIEcDQefyXSAckb0vP-
+                id: pair_870a8e148231480f9ca6111808cc0dbd
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/exercicios
+            name: Listar todos Exercícios
+            meta:
+              id: req_f17ac27f7bd84c29adca03a97a74bfe2
+              created: 1761672505921
+              modified: 1761680033881
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159623
+            method: GET
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjgwMDE3LCJleHAiOjE3NjE2ODM2MTd9.05WlGPE5Ofjg7Aj6me0MMsde1_ob9jK_cw5VpnKOZC9fUtIEcDQefyXSAckb0vP-
+                id: pair_d6cfbbb4cb854101b4e87609912c5123
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/exercicios/2
+            name: Deletar Exercícios
+            meta:
+              id: req_657d392809e4459b8f82d52ebdc13a58
+              created: 1761680241938
+              modified: 1761680320274
+              isPrivate: false
+              description: ""
+              sortKey: -1680422159588
+            method: DELETE
+            body:
+              mimeType: application/json
+              text: ""
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_990e084f91af478db17b2261db8efa76
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjgwMDE3LCJleHAiOjE3NjE2ODM2MTd9.05WlGPE5Ofjg7Aj6me0MMsde1_ob9jK_cw5VpnKOZC9fUtIEcDQefyXSAckb0vP-
+                id: pair_393b5c119d324bd5b15c5c5ef13bf782
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: Usuários
+        meta:
+          id: fld_2102aea8848c417fac6bd828efb2d111
+          created: 1761673026165
+          modified: 1761742741138
+          sortKey: -1693023615722
+          description: ""
+        children:
+          - url: http://localhost:8080/usuarios/all
+            name: Consultar todos os Usuários
+            meta:
+              id: req_6b5852a7e0d747759c28d580b18bda0d
+              created: 1761673026167
+              modified: 1761676838896
+              isPrivate: false
+              description: ""
+              sortKey: -1760811773257
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjc2NTY3LCJleHAiOjE3NjE2ODAxNjd9.wNS48bYKBWEWpE14GRgP9Eux9qsSG05EmYLKVsFmV8QPg-omfpOTlPENte2pddFc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/2
+            name: Consultar Usuários por ID
+            meta:
+              id: req_34c94c6cc5294b62aa8de991e6f9d777
+              created: 1761673026169
+              modified: 1761676793747
+              isPrivate: false
+              description: ""
+              sortKey: -1760812594231
+            method: GET
+            headers:
+              - name: User-Agent
+                value: insomnia/11.6.1
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjc2NTY3LCJleHAiOjE3NjE2ODAxNjd9.wNS48bYKBWEWpE14GRgP9Eux9qsSG05EmYLKVsFmV8QPg-omfpOTlPENte2pddFc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/calcular-imc/1
+            name: Calcular IMC
+            meta:
+              id: req_fb76c990d2d84c92aafa1cf863cee790
+              created: 1761673026172
+              modified: 1761757203115
+              isPrivate: false
+              description: ""
+              sortKey: -1760814008904
+            method: POST
+            body:
+              mimeType: application/json
+              text: >
+                {
+                  "nome": "Admin",
+                  "usuario": "admin@email.com",
+                	"data_nasc": "2000-03-20",
+                  "altura": 1.80,
+                  "peso": 80.00,
+                	"perfil": "Tdah",
+                	"senha": "maria123",
+                  "foto":"https://ik.imagekit.io/kv6tr431r/sample-video.mp4?updatedAt=1761569582831"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_138e2a82998b41ae98a3c852d2e5c22f
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_425651f297d245b48b4899cd3ad17d46
+              - id: pair_40830d566ba441e3a491913f0b55fe53
+                name: Authorization
+                value: ""
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/atualizar
+            name: Atualizar Usuários
+            meta:
+              id: req_4a89386f78ee4fa28381e8f56bd490d3
+              created: 1761673026173
+              modified: 1761678919489
+              isPrivate: false
+              description: ""
+              sortKey: -1760814684211
+            method: PUT
+            body:
+              mimeType: application/json
+              text: >-
+                {
+                	"id":1,
+                  "nome": "Maria Update 2",
+                  "usuario": "maria_@email.com",
+                	"data_nasc": "2000-03-20",
+                  "altura": 1.80,
+                  "peso": 80.00,
+                	"perfil": "Tdah",
+                	"senha": "maria123",
+                  "foto":"https://ik.imagekit.io/kv6tr431r/sample-video.mp4?updatedAt=1761569582831"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+              - name: Authorization
+                value: Bearer
+                  eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJtYXJpYV9AZW1haWwuY29tIiwiaWF0IjoxNzYxNjc2NTY3LCJleHAiOjE3NjE2ODAxNjd9.wNS48bYKBWEWpE14GRgP9Eux9qsSG05EmYLKVsFmV8QPg-omfpOTlPENte2pddFc
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/logar
+            name: Autenticar Usuários
+            meta:
+              id: req_2933a83033c74e888a4a8a653ca71fe2
+              created: 1761673848809
+              modified: 1761744140056
+              isPrivate: false
+              description: ""
+              sortKey: -1760813621540
+            method: POST
+            body:
+              mimeType: application/json
+              text: |
+                {
+                  "usuario": "maria_@email.com",
+                	"senha": "maria123"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+                id: pair_27434f9615ab4a7ba969f0e7add16639
+              - name: User-Agent
+                value: insomnia/11.6.1
+                id: pair_88013174fb7c41efb842254df4c449a8
+              - id: pair_b5bad56d0fd84ed8980157f9e94b1700
+                name: ""
+                value: ""
+                description: ""
+                disabled: false
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:8080/usuarios/cadastrar
+            name: Cadastrar Usuários
+            meta:
+              id: req_9bfc8fb8c1da4b28a9a68b0e19dca78e
+              created: 1761745450301
+              modified: 1761757216187
+              isPrivate: false
+              description: ""
+              sortKey: -1760813815222
+            method: POST
+            body:
+              mimeType: application/json
+              text: >
+                {
+                  "nome": "Admin",
+                  "usuario": "admin@email.com",
+                	"data_nasc": "2000-03-20",
+                  "altura": 1.80,
+                  "peso": 80.00,
+                	"perfil": "Tdah",
+                	"senha": "maria123",
+                  "foto":"https://ik.imagekit.io/kv6tr431r/sample-video.mp4?updatedAt=1761569582831"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.6.1
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ca6837196c27497c852eb983ebcc72fa
+    created: 1714609683115
+    modified: 1714609683115
+environments:
+  name: Base Environment
+  meta:
+    id: env_5502a8e86b794821969f367e074f6102
+    created: 1714609683102
+    modified: 1714609683102
+    isPrivate: false
